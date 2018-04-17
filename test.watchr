@@ -20,7 +20,7 @@ end
 
 def run( cmd )
   system 'clear'
-  puts   cmd
+  # puts   cmd
   system cmd
 end
 
