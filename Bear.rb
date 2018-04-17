@@ -1,5 +1,5 @@
 class Bear
-  attr_reader(:name,:tummy)
+  attr_reader(:name)
 
   def initialize(name)
     @name = name
@@ -13,5 +13,9 @@ class Bear
 
   def food_count()
     @tummy.size()
+  end
+
+  def roar()
+    "*ʀᴏᴀʀ*"
   end
 end

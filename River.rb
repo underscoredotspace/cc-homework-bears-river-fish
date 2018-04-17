@@ -1,5 +1,5 @@
 class River
-  attr_reader(:name, :fishes)
+  attr_reader(:name)
 
   def initialize(name)
     @name = name
@@ -15,7 +15,7 @@ class River
   end
 
   def lose_fish()
-    fish = @fishes.sample(1)
+    fish = @fishes.sample()
     @fishes.delete(fish)
     return fish
   end

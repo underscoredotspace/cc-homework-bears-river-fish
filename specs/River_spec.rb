@@ -16,7 +16,7 @@ class TestRiver < MiniTest::Test
   end
 
   def test_river_has_no_fishes
-    assert_equal([], @river.fishes())
+    assert_equal(0, @river.fish_count())
   end
 
   def test_add_fishes
@@ -24,5 +24,13 @@ class TestRiver < MiniTest::Test
     @river.add_fish(@fish2)
     @river.add_fish(@fish3)
     assert_equal(3, @river.fish_count())
+  end
+
+  def test_lose_fish
+    @river.add_fish(@fish1)
+    @river.add_fish(@fish2)
+    @river.add_fish(@fish3)
+    @river.lose_fish()
+    assert_equal(2, @river.fish_count())
   end
 end
