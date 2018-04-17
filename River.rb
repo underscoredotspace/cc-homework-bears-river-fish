@@ -13,4 +13,10 @@ class River
   def fish_count()
     @fishes.count()
   end
+
+  def lose_fish()
+    fish = @fishes.sample(1)
+    @fishes.delete(fish)
+    return fish
+  end
 end
