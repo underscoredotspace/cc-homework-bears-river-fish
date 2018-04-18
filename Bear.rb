@@ -8,7 +8,7 @@ class Bear
 
   def take_fish(river)
     fish = river.lose_fish()
-    @tummy << fish
+    @tummy << fish if fish
   end
 
   def food_count()
